@@ -16,6 +16,8 @@ import com.ritesh.clique.CameraActivity;
 import java.io.IOException;
 import java.util.List;
 
+
+
 @SuppressWarnings("deprecation")
 class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
 //    private final String TAG = "Preview";
