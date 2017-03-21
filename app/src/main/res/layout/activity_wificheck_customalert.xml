@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- <pl.bclogic.pulsator4droid.library.PulsatorLayout
+             android:id="@+id/pulsator"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             app:pulse_color="@color/colorAccentt"
+             app:pulse_count="5"
+             app:pulse_duration="6000"
+             app:pulse_repeat="0"
+             app:pulse_startFromScratch="false">
+
+         </pl.bclogic.pulsator4droid.library.PulsatorLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_topp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txt_dia"
+            android:layout_toStartOf="@+id/txt_dia">
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:pulse_color="@color/colorAccentt"
+                app:pulse_count="5"
+                app:pulse_duration="6000"
+                app:pulse_repeat="0"
+                app:pulse_startFromScratch="false">
+
+                <ImageView
+                    android:id="@+id/wifi_m"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_wifi" />
+
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+        </RelativeLayout>
+
+        <!--<ImageView
+            android:id="@+id/wifi_m"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_wifi_a"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/txt_dia"
+            android:layout_toStartOf="@+id/txt_dia" />-->
+
+        <TextView
+            android:id="@+id/txt_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="CONNECTION LOST"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/goProDialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/rl_top"
+        android:background="@drawable/ic_wifi_dialog" />
+
+
+    <TextView
+        android:id="@+id/txt_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goProDialogImage"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Oops! Your Internet is not working.\n Please try again."
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btn_tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_dialog"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_wifi_dialog"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:text="TRY AGAIN"
+        android:textStyle="normal"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+</RelativeLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:padding="10dp">
+
+        &lt;!&ndash;<TextView
+            android:id="@+id/txt_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="CONNECTION LOST"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />&ndash;&gt;
+
+        <ImageView
+            android:id="@+id/iv_wifi_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_wifi_dialog" />
+
+
+        <TextView
+            android:id="@+id/txt_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_wifi_dialog"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Oops! Your Internet is not working.\n Please try again."
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_tryagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_dialog"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_wifi_ok"
+            android:padding="10dp"
+            android:text="TRY AGAIN"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </RelativeLayout>-->

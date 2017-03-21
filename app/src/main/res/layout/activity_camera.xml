@@ -1,0 +1,336 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+    <!--https://github.com/devcelebi/Kut-Camera-->
+    <!--https://github.com/devcelebi/Kut-Camera-->
+    <!--https://github.com/devcelebi/Kut-Camera-->
+
+    <FrameLayout
+        android:id="@+id/preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!--used for Back ic_camera_click only (Start)-->
+        <SurfaceView
+            android:id="@+id/KutCameraFragment"
+            android:name="com.kut.camera.KutCameraFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <!--used for Back ic_camera_click only (End)-->
+
+    </FrameLayout>
+
+    <!--relative layout for bottom sheet showing capture and galley button (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_rlbottomfirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:alpha="0.8"
+        android:background="@color/grey05"
+        android:padding="10dp">
+
+        <!--this is image view is used for image capture (Start)-->
+        <ImageView
+            android:id="@+id/iv_capture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="ImageView Used For Capture Image"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:src="@drawable/ic_camera_click_one" />
+        <!--this is image view is used for image capture (End)-->
+
+        <!--this image view is used for access gallery (Start)-->
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_galleryy" />
+        <!--this image view is used for access gallery (End)-->
+
+        <!--this image view is used for ic_camera_click rotation (Star)-->
+        <ImageView
+            android:id="@+id/iv_rotate_camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/camera_switch_icon" />
+        <!--this image view is used for ic_camera_click rotation (End)-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rlbottomsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <!--this is image view is used for image capture (Start)-->
+        <ImageView
+            android:id="@+id/iv_capturee"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="ImageView Used For Capture Image"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:src="@drawable/ic_camera_click_two" />
+        <!--this is image view is used for image capture (End)-->
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_videoscreen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/ChangeCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:alpha=".6"
+            android:src="@mipmap/video_capture" />
+
+    </RelativeLayout>
+
+    <!--relative layout for bottom sheet showing capture and galley button (End)-->
+
+    <!--relative layout for controling flash modes (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="65dp">
+
+        <com.rm.rmswitch.RMTristateSwitch
+            android:id="@+id/rm_triswitch"
+            android:layout_width="86dp"
+            android:layout_height="40dp"
+            app:forceAspectRatio="false"
+            app:state="left"
+            app:switchBkgLeftColor="@color/red"
+            app:switchBkgMiddleColor="@color/grey"
+            app:switchBkgRightColor="@color/green"
+            app:switchToggleLeftColor="@color/red"
+            app:switchToggleLeftImage="@drawable/ic_flash_off"
+            app:switchToggleMiddleColor="@color/grey"
+            app:switchToggleMiddleImage="@drawable/ic_flash_automatic"
+            app:switchToggleRightColor="@color/green"
+            app:switchToggleRightImage="@drawable/ic_flash_on" />
+
+        <TextView
+            android:id="@+id/txt_rm_triswitch_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rm_triswitch"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <!--relative layout for controling flash modes (End)-->
+
+    <!--relative layout used for showing final image captured by gallery (Start)-->
+    <RelativeLayout
+        android:id="@+id/setbgselectedimage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ic_bgg"
+        android:visibility="gone">
+
+    </RelativeLayout>
+    <!--relative layout used for showing final image captured by gallery (End)-->
+
+    <!--imageview used for showing captured image by ic_camera_click (Start)-->
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="ImageView Used For Showing Image"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_bgg"
+        android:visibility="gone" />
+    <!--imageview for selected or captured image (End)-->
+
+    <!--linear layout showing social icon after taking image for sharing image (Start)-->
+    <LinearLayout
+        android:id="@+id/ll_bottomshet"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="#80282626"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="4">
+
+        <!--relative layout for facebook click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_fb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_fbc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_fb"
+                android:contentDescription="Button Used For Facebook" />
+
+        </RelativeLayout>
+        <!--relative layout for facebook click (End)-->
+
+        <!--relative layout for instagram click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_instagram"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_instagramc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_instagram"
+                android:contentDescription="Button Used For Instagram" />
+
+        </RelativeLayout>
+        <!--relative layout for instagram click (End)-->
+
+        <!--relative layout for twitter click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_twitter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_twitterc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_twitter"
+                android:contentDescription="Button Used For Twitter" />
+
+        </RelativeLayout>
+        <!--relative layout for twitter click (End)-->
+
+        <!--relative layout for snapchat click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_snapchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_snapchatc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_snapchat"
+                android:contentDescription="Button Used For SnapChat" />
+
+        </RelativeLayout>
+        <!--relative layout for snapchat click (End)-->
+
+    </LinearLayout>
+    <!--linear layout showing social icon after taking image for sharing image (End)-->
+
+
+    <!--video layout (Start)-->
+
+    <RelativeLayout
+        android:id="@+id/rl_videomain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+        <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+        <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+
+        <LinearLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/button_ChangeCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:src="@mipmap/camera_switch_icon" />
+
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/button_capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/video_start_stop_selector" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--video layout (End)-->
+
+
+</FrameLayout>

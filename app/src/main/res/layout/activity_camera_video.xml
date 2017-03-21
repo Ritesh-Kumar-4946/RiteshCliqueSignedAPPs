@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+
+    <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+    <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+    <!--https://github.com/umesh-kushwaha/Android_Video_Recording_portrait-->
+
+    <LinearLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_camerascreen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/ChangeCameraa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:alpha=".6"
+            android:src="@drawable/ic_mycamera" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rlbottomfirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.8"
+        android:background="@color/grey05"
+        android:padding="10dp">
+
+        <!--this is image view is used for image capture (Start)-->
+        <ImageView
+            android:id="@+id/button_capture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="ImageView Used For Capture Image"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:src="@drawable/ic_camera_click_one" />
+        <!--this is image view is used for image capture (End)-->
+
+        <!--this image view is used for access gallery (Start)-->
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+        <!--this image view is used for access gallery (End)-->
+
+        <!--this image view is used for ic_camera_click rotation (Star)-->
+        <ImageView
+            android:id="@+id/button_ChangeCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/camera_switch_icon" />
+        <!--this image view is used for ic_camera_click rotation (End)-->
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_rlbottomsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        &lt;!&ndash;this is image view is used for image capture (Start)&ndash;&gt;
+        <ImageView
+            android:id="@+id/iv_capturee"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="ImageView Used For Capture Image"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:src="@drawable/ic_camera_click" />
+        &lt;!&ndash;this is image view is used for image capture (End)&ndash;&gt;
+
+        &lt;!&ndash;this image view is used for access gallery (Start)&ndash;&gt;
+        &lt;!&ndash;
+          <ImageView
+              android:id="@+id/iv_gallery"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/ic_galleryy" />
+          &ndash;&gt;
+        &lt;!&ndash;this image view is used for access gallery (End)&ndash;&gt;
+
+        &lt;!&ndash;this image view is used for ic_camera_click rotation (Star)&ndash;&gt;
+        &lt;!&ndash;
+         <ImageView
+             android:id="@+id/iv_rotate_camera"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:src="@drawable/ic_rotate_camera" />
+         &ndash;&gt;
+        &lt;!&ndash;this image view is used for ic_camera_click rotation (End)&ndash;&gt;
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

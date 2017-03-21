@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bgg">
+
+    <!--relative layout for toolbar top (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+    </RelativeLayout>
+    <!--relative layout for toolbar top (End)-->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_toolbar">
+
+        <!--relative layout main under scroll (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_topmain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!--relative layout for logo (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_clogo"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/chal_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_logo_cliquee" />
+
+            </RelativeLayout>
+            <!--relative layout for logo (End)-->
+
+            <!--relative layout for all fields (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_field_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_clogo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <!--Realative layout for email id (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_emailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_emailid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="Email Address"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="#ffffff"
+                            android:textColorHint="@color/white"
+                            android:textSize="15sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+                <!--Realative layout for email id (End)-->
+
+                <!--Realative layout for password (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_emailid"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="#ffffff"
+                            android:textColorHint="@color/white"
+                            android:textSize="15sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+                <!--Realative layout for password (End)-->
+
+                <!--relative layout for forgot password button (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_btn_forgotpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/rl_password"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_forgotpassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_background_alreadyaccount"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="Forgot Password?"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--relative layout for forgot password button (End)-->
+
+                <!--relative layout for login button (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/rl_btn_forgotpassword"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_selector_signup"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="Login"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--relative layout for login button (End)-->
+
+                <!--relative layout for facebook login button (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_btn_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/rl_btn_login"
+                    android:layout_marginTop="40dp">
+
+                    <in.championswimmer.libsocialbuttons.buttons.BtnFacebook
+                        android:id="@+id/btn_facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_background_border_signup"
+                        android:text="Login with Facebook"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+                <!--relative layout for facebook login button (End)-->
+
+                <!--relative layout for instagram login button (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_btn_instagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/rl_btn_facebook"
+                    android:layout_marginTop="20dp">
+
+                    <in.championswimmer.libsocialbuttons.buttons.BtnInstagram
+                        android:id="@+id/btn_instagram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_background_border_signup"
+                        android:text="Login with Instagram"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+                <!--relative layout for instagram login button (End)-->
+
+                <!--relative layout for blank field (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_blank"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/rl_btn_instagram">
+
+                </RelativeLayout>
+                <!--relative layout for blank field (End)-->
+
+            </RelativeLayout>
+            <!--relative layout for all fields (End)-->
+
+        </RelativeLayout>
+        <!--relative layout main under scroll (End)-->
+
+    </ScrollView>
+
+</RelativeLayout>

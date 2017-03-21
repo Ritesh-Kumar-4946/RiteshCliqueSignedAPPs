@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <RelativeLayout
+        android:id="@+id/clogo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/chal_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_clique_logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/wifi_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:padding="1dp">
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:pulse_color="@color/yellow"
+                app:pulse_count="5"
+                app:pulse_duration="6000"
+                app:pulse_repeat="0"
+                app:pulse_startFromScratch="false">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_wifi_n" />
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_wifi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wifi_logo"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Uh oh! Check your internet\n connection and restart the app."
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_wifi_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_wifi_text"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_wifi_ok"
+            android:padding="10dp"
+            android:text="Refresh"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

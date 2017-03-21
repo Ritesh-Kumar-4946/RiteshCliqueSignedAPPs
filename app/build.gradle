@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'   /*Butter Knife 01*/
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    useLibrary 'org.apache.http.legacy'
+    // this library is needed for asynktast http client working in android 6.0
+    defaultConfig {
+        applicationId "com.cliqe.main"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:design:23.3.0'
+
+    /*this is needed for social login button (Start)*/
+    /*https://github.com/championswimmer/Android-SocialButtons*/
+    compile 'com.github.championswimmer:Android-SocialButtons:1.0'
+    /*https://github.com/championswimmer/Android-SocialButtons*/
+    /*this is needed for social login button (End)*/
+
+    /*butter knife 02*/
+    compile 'com.jakewharton:butterknife:8.3.0'    /*Butter Knife 02*/
+    apt 'com.jakewharton:butterknife-compiler:8.3.0' /*Butter Knife 02*/
+    /*butter knife 02*/
+
+    /*this is needed for password edittext (Start)*/
+    /*https://github.com/anshulagarwal06/PasswordEditText*/
+    compile 'com.github.anshulagarwal06:PasswordEditText:v1.0'
+    /*https://github.com/anshulagarwal06/PasswordEditText*/
+    /*this is needed for password edittext (End)*/
+
+    /* this library is needed for animating blank fields (Start)*/
+    /*https://github.com/daimajia/AndroidViewAnimations*/
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    /*https://github.com/daimajia/AndroidViewAnimations*/
+    /* this library is needed for animating blank fields (End)*/
+
+    /*this is needed for showing animation background in wifi check on start  app (Start)*/
+    /*https://github.com/booncol/Pulsator4Droid*/
+    compile 'pl.bclogic:pulsator4droid:1.0.2'
+    /*https://github.com/booncol/Pulsator4Droid*/
+    /*this is needed for showing animation background in wifi check on start app (End)*/
+
+    /*this is needed for showing beautiful toast messages on signup time (Start)*/
+    /*https://github.com/yadav-rahul/TastyToast/tree/lib/tastytoast*/
+    compile 'com.sdsmdg.tastytoast:tastytoast:0.0.4'
+    /*https://github.com/yadav-rahul/TastyToast/tree/lib/tastytoast*/
+    /*this is needed for showing beautiful toast messages on signup time (End)*/
+
+    /*this is needed for showing beautiful rounded progress on video recording time (Start)*/
+    /*https://github.com/HotBitmapGG/RingProgressBar*/
+    compile 'com.github.HotBitmapGG:RingProgressBar:V1.2.2'
+    /*https://github.com/HotBitmapGG/RingProgressBar*/
+    /*this is needed for showing beautiful rounded progress on video recording time (End)*/
+
+    /*this is needed for flash button Switch Mode (Start)*/
+    /*https://github.com/RiccardoMoro/RMSwitch*/
+    compile 'com.rm:rmswitch:1.1.1'            // Three states switch
+    /*https://github.com/RiccardoMoro/RMSwitch*/
+    /*this is needed for flash button Switch Mode (End)*/
+
+    /*this is needed for full screen video view on video screen (Start)*/
+    /*https://android-arsenal.com/details/1/1906*/
+    compile 'com.github.rtoshiro.fullscreenvideoview:fullscreenvideoview:1.1.2'
+    /*https://android-arsenal.com/details/1/1906*/
+    /*this is needed for full screen video view on video screen (End)*/
+
+    /*this is needed for ripple effect below api 21 (Start)*/
+    /*https://github.com/traex/RippleEffect*/
+    compile 'com.github.traex.rippleeffect:library:1.3'
+    /*https://github.com/traex/RippleEffect*/
+    /*this is needed for ripple effect below api 21 (Start)*/
+}

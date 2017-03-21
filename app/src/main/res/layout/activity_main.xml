@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/setbgselectedimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_main_bg">
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_border_login_signup"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor" />
+
+        <!-- BOTTOM linear layout for Social icons on main screen (Start)-->
+        <LinearLayout
+            android:id="@+id/ll_bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80282626"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <!--relative layout for ic_camera_click click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_cameraclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_cameraclick"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_camera" />
+
+
+                <io.netopen.hotbitmapgg.library.view.RingProgressBar
+                    android:id="@+id/iv_cameraclicklong"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:max="100"
+                    app:ringColor="@color/colorPrimary"
+                    app:ringProgressColor="@color/colorPrimaryDark"
+                    app:ringWidth="3dp"
+                    app:style="FILL"
+                    app:textColor="@color/colorPrimary"
+                    app:textIsShow="true"
+                    app:textSize="16sp" />
+
+
+            </RelativeLayout>
+            <!--relative layout for ic_camera_click click (End)-->
+
+            <!--relative layout for facebook click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_fbclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_fb"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_fb" />
+
+            </RelativeLayout>
+            <!--relative layout for facebook click (End)-->
+
+            <!--relative layout for instagram click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_instagramclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_instagram"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_instagram" />
+
+            </RelativeLayout>
+            <!--relative layout for instagram click (End)-->
+
+            <!--relative layout for twitter  click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_twitterclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_twitter"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_twitter" />
+
+            </RelativeLayout>
+            <!--relative layout for twitter click (End)-->
+
+            <!--relative layout for snapchat click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_snapchatclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_snapchat"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_snapchat" />
+
+            </RelativeLayout>
+            <!--relative layout for snapchat click (End)-->
+
+        </LinearLayout>
+        <!-- BOTTOM linear layout for Social icons on main screen (End)-->
+
+        <!-- BOTTOM linear layout for Social icons after taking image (Start)-->
+        <LinearLayout
+            android:id="@+id/ll_bottomshet"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80282626"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="4">
+
+            <!--relative layout for facebook click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_fb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_fbc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_fb" />
+
+            </RelativeLayout>
+            <!--relative layout for facebook click (End)-->
+
+            <!--relative layout for instagram click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_instagram"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_instagramc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_instagram" />
+
+            </RelativeLayout>
+            <!--relative layout for instagram click (End)-->
+
+            <!--relative layout for twitter click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_twitter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_twitterc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_twitter" />
+
+            </RelativeLayout>
+            <!--relative layout for twitter click (End)-->
+
+            <!--relative layout for snapchat click (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_snapchat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_snapchatc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/ic_snapchat" />
+
+            </RelativeLayout>
+            <!--relative layout for snapchat click (End)-->
+
+        </LinearLayout>
+        <!-- BOTTOM linear layout for Social icons after taking image (End)-->
+
+        <!--relative layout showing in middle when image is taken (Start)-->
+        <!--<RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_share_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#806bcbff"
+                android:visibility="visible">
+
+                &lt;!&ndash;Relative layout for holds middle layout (Start)&ndash;&gt;
+                <RelativeLayout
+                    android:id="@+id/rl_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    &lt;!&ndash;Relative layout for holds image and social icons (Start)&ndash;&gt;
+                    <RelativeLayout
+                        android:id="@+id/rl_underinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="50dp"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp"
+                        android:paddingTop="50dp">
+
+                        &lt;!&ndash;Relative layout for inner Image (Start)&ndash;&gt;
+                        <RelativeLayout
+                            android:id="@+id/rl_imageunderinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_imageselected"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ic_main_bg" />
+                        </RelativeLayout>
+                        &lt;!&ndash;Relative layout for inner Image (End)&ndash;&gt;
+
+                        &lt;!&ndash;linear layout for inner socail app (Start)&ndash;&gt;
+                        <LinearLayout
+                            android:id="@+id/ll_innerbottomsheet"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/rl_imageunderinner"
+                            android:background="#80282626"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            &lt;!&ndash;relative layout for gallery click (Start)&ndash;&gt;
+                            <RelativeLayout
+                                android:id="@+id/rl_fbclickinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_fbinner"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/ic_fb" />
+
+                            </RelativeLayout>
+                            &lt;!&ndash;relative layout for gallery click (End)&ndash;&gt;
+
+                            &lt;!&ndash;relative layout for gallery click (Start)&ndash;&gt;
+                            <RelativeLayout
+                                android:id="@+id/rl_instagramclickinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_instagraminner"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/ic_instagram" />
+
+                            </RelativeLayout>
+                            &lt;!&ndash;relative layout for gallery click (End)&ndash;&gt;
+
+                            &lt;!&ndash;relative layout for gallery click (Start)&ndash;&gt;
+                            <RelativeLayout
+                                android:id="@+id/rl_snapchatclickinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_snapchatinner"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/ic_snapchat" />
+
+                            </RelativeLayout>
+                            &lt;!&ndash;relative layout for gallery click (End)&ndash;&gt;
+
+                        </LinearLayout>
+                        &lt;!&ndash;linear layout for inner socail app (End)&ndash;&gt;
+
+                    </RelativeLayout>
+                    &lt;!&ndash;Relative layout for holds image and social icons (End)&ndash;&gt;
+
+                </RelativeLayout>
+                &lt;!&ndash;Relative layout for holds middle layout (End)&ndash;&gt;
+
+            </RelativeLayout>
+
+        </RelativeLayout>-->
+        <!--relative layout showing in middle when image is taken (End)-->
+
+        <!--linear layout for botton icons (End)-->
+
+        <!--relative layout for select image from ic_camera_click or gallery (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_bgcolor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#806bcbff"
+            android:visibility="gone"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <!--relative layout for ic_camera_click image (Start)-->
+                <RelativeLayout
+                    android:id="@+id/top_holder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/boarderorange"
+                    android:gravity="center"
+                    android:onClick="startCamera"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/camera_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="Images"
+                        android:src="@drawable/ic_device_access_cameraa" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/camera_icon"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Image"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <!--relative layout for ic_camera_click image (End)-->
+
+                <!--relative layout for gallery image (Start)-->
+                <RelativeLayout
+                    android:id="@+id/bottom_holder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/boarderblue"
+                    android:gravity="center"
+                    android:onClick="startGallery">
+
+                    <ImageView
+                        android:id="@+id/gallery_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="video"
+                        android:src="@drawable/ic_galler" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gallery_icon"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Gallery"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <!--relative layout for gallery image (End)-->
+
+            </LinearLayout>
+
+            <!--relative layout for middle OR (Start)-->
+            <RelativeLayout
+                android:id="@+id/step_number"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_step">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="OR"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!--relative layout for middle OR (End)-->
+        </RelativeLayout>
+        <!--relative layout for select image from ic_camera_click or gallery (End)-->
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="82dp"
+            android:text="Share Via"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+        <!--relative layout for seturedlect image from ic_camera_click or gallery (End)-->
+
+        <!--relative layout for showing selected or captured image from ic_camera_click or gallery (Start)-->
+        <!--relative layout for showing selected or captured image from ic_camera_click or gallery (End)-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

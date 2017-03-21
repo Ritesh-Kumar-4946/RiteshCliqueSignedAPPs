@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalImageActivity">
+
+    <!--relative layout used for showing final image captured by gallery (Start)-->
+    <RelativeLayout
+        android:id="@+id/setbgselectedimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/grey"
+            android:contentDescription="Final Image"/>
+
+    </RelativeLayout>
+    <!--relative layout used for showing final image captured by gallery (End)-->
+
+    <!--linear layout showing social icon after taking image for sharing image (Start)-->
+    <LinearLayout
+        android:id="@+id/ll_bottomshet"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#80282626"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4">
+
+        <!--relative layout for facebook click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_fb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_fbc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_fb"
+                android:contentDescription="facebook icon" />
+
+        </RelativeLayout>
+        <!--relative layout for facebook click (End)-->
+
+        <!--relative layout for instagram click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_instagram"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_instagramc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_instagram"
+                android:contentDescription="Instagram icon" />
+
+        </RelativeLayout>
+        <!--relative layout for instagram click (End)-->
+
+        <!--relative layout for twitter click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_twitter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_twitterc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_twitter"
+                android:contentDescription="Twitter icon" />
+
+        </RelativeLayout>
+        <!--relative layout for twitter click (End)-->
+
+        <!--relative layout for snapchat click (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_snapchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_snapchatc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/ic_snapchat"
+                android:contentDescription="Snapchat icon" />
+
+        </RelativeLayout>
+        <!--relative layout for snapchat click (End)-->
+
+    </LinearLayout>
+    <!--linear layout showing social icon after taking image for sharing image (End)-->
+
+
+</RelativeLayout>
