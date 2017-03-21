@@ -18,6 +18,7 @@ import java.util.List;
 
 @SuppressWarnings("deprecation")
 class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
+//    private final String TAG = "Preview";
     private final String TAG = "Preview";
 
     SurfaceView mSurfaceView;

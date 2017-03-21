@@ -54,8 +54,12 @@ import butterknife.ButterKnife;
 public class CameraActivity extends Activity {
 
 	/*https://github.com/devcelebi/Kut-Camera*/
-    /*https://github.com/devcelebi/Kut-Camera*/
-    /*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
+	/*https://github.com/devcelebi/Kut-Camera*/
 
     private static final int MY_INTENT_CLICK = 302;
     @BindView(R.id.iv_capture)
